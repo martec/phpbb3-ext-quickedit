@@ -7,8 +7,8 @@
 		</dl>
 		{S_FORM_TOKEN}
 
-		<div id="message-box">
-			<textarea name="message" id="message" rows="15" cols="76" tabindex="4" class="inputbox">{MESSAGE}{DRAFT_MESSAGE}{SIGNATURE}</textarea>
+		<div id="message-box_{POST_ID}">
+			<textarea name="message" id="quickedit_{POST_ID}" rows="15" cols="76" tabindex="4" class="inputbox">{MESSAGE}{DRAFT_MESSAGE}{SIGNATURE}</textarea>
 		</div>
 	</fieldset>
 	<div class="panel bg2">
@@ -25,3 +25,8 @@
 	</div>
 </form>
 </div>
+<script type="text/javascript">
+	if (CKEDITOR !== null && typeof CKEDITOR !== 'undefined') {
+		$('#quickedit_{POST_ID}').ckeditor();
+	}
+</script>

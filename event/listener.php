@@ -88,7 +88,7 @@ class listener implements EventSubscriberInterface
 			$this->helper->add_hidden_fields($event);
 
 			// Update S_HIDDEN_FIELDS in page_data
-			$this->template->assign_vars(array_merge($event['page_data'], array('S_HIDDEN_FIELDS' => $event['s_hidden_fields'])));
+			$this->template->assign_vars(array_merge($event['page_data'], array('S_HIDDEN_FIELDS' => $event['s_hidden_fields'], 'POST_ID' => $event['post_id'])));
 			$this->template->set_filenames(array(
 				'body'	=> '@marc_quickedit/quickedit_body.html'
 			));

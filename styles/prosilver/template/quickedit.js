@@ -135,7 +135,7 @@ phpbb.QuickeditAjaxifyEditButtons = function(elements) {
 $(window).on('load', function() {
 	var allowQuickeditDiv = $('div[data-allow-quickedit]');
 
-	if (allowQuickeditDiv !== 'undefined' && allowQuickeditDiv.attr('data-allow-quickedit') === '1')
+	if (allowQuickeditDiv !== 'undefined' && allowQuickeditDiv.length === 1)
 	{
 		phpbb.QuickeditAjaxifyEditButtons($(document));
 
